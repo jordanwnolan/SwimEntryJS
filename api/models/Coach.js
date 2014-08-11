@@ -24,13 +24,12 @@ module.exports = {
       type: 'string',
       required: true
     },
-    headCoach: {
-      type:'boolean',
-      required: true,
-      defaultsTo: false
-    },
     team: {
       model: 'team'
+    },
+    swimmers: {
+      collection: 'swimmer',
+      via: 'coach'
     }
   }
 };

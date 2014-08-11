@@ -1,5 +1,5 @@
 /**
-* Team.js
+* SwimEntry.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -8,20 +8,14 @@
 module.exports = {
 
   attributes: {
-    name: {
-      type: 'string',
-      required: true
+    time: {
+      type: 'string'
     },
-    shortName: {
-      type: 'string',
-      required: true
+    swimEvent: {
+      model: 'swimevent'
     },
-    coach: {
-      model: 'coach'
-    },
-    swimmers: {
-      collection: 'swimmer',
-      via: 'team'
+    swimmer: {
+      model: 'swimmer'
     }
   }
 };
