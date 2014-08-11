@@ -1,5 +1,5 @@
 /**
-* Coach.js
+* Team.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -8,29 +8,17 @@
 module.exports = {
 
   attributes: {
-    firstname: {
+    name: {
       type: 'string',
       required: true
     },
-    lastname: {
+    shortName: {
       type: 'string',
       required: true
     },
-    email: {
-      type: 'string',
-      required: true
-    },
-    password: {
-      type: 'string',
-      required: true
-    },
-    headCoach: {
-      type:'boolean',
-      required: true,
-      defaultsTo: false
-    },
-    team: {
-      model: 'team'
+    coaches: {
+      collection: 'coach',
+      via: 'team'
     }
   }
 };
