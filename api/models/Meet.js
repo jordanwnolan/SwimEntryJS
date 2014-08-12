@@ -16,6 +16,12 @@ module.exports = {
     meetDate: {
       type: 'date',
       required: true
+    },
+
+    teams: {
+      collection: 'team',
+      via: 'meets',
+      dominant: true
     }
   }
 };

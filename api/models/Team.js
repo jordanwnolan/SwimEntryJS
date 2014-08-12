@@ -22,6 +22,10 @@ module.exports = {
     swimmers: {
       collection: 'swimmer',
       via: 'team'
+    },
+    meets: {
+      collection: 'meet',
+      via: 'teams'
     }
   }
 };
