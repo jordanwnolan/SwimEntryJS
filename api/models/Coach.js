@@ -26,10 +26,6 @@ module.exports = {
     },
     team: {
       model: 'team'
-    },
-    swimmers: {
-      collection: 'swimmer',
-      via: 'coach'
     }
   }
 };
