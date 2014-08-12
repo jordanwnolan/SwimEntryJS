@@ -4,7 +4,9 @@ a [Sails](http://sailsjs.org) application
 
 ## Setup
 npm install
+
 bower install
+
 npm start
 
 will get you up and running with a dev server on port 1337 using nodemon.
