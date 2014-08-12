@@ -10,7 +10,12 @@ module.exports = {
   attributes: {
     swimEntries: {
       collection: 'swimentry',
-      via 'meet'
+      via: 'meet'
+    },
+
+    meetDate: {
+      type: 'date',
+      required: true
     }
   }
 };

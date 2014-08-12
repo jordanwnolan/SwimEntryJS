@@ -17,7 +17,7 @@ module.exports = {
     swimmer: {
       model: 'swimmer'
     },
-    meet {
+    meet: {
       model: 'meet'
     }
   }

@@ -17,8 +17,5 @@ Use sails lift --prod to start a production server
 An application designed for swim team coaches to manage swimmer entries for upcoming meets.  The application will output a file containing all the entries for a meet, formatted for use with Colorado Timing system.
 
 ### Technologies used
-Sails.js
-Node.js
-MongoDB
-Backbone.js
+Sails.js, Node.js, MongoDB, Backbone.js
 
