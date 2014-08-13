@@ -21,10 +21,6 @@ module.exports = {
     },
     coach: {
       model: 'coach'
-    },
-    entries: {
-      collection: 'swimentry',
-      via: 'swimmer'
     }
   }
 };

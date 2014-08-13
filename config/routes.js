@@ -34,6 +34,16 @@ module.exports.routes = {
   '/api/coach': {
     controller: 'coach',
     action: 'show'
+  },
+
+  'get /api/meet/:id': {
+    controller: 'meet',
+    action: 'show'
+  },
+
+  'get /api/meet/:id/entries': {
+    controller: 'meet',
+    action: 'meetEntries'
   }
 
 

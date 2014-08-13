@@ -26,7 +26,14 @@ module.exports = {
     },
     team: {
       model: 'team'
+    },
+
+    toJSON: function() {
+      var obj = this.toObject();
+      delete obj.password;
+      return obj;
     }
   }
+
 };
 
