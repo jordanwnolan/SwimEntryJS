@@ -16,15 +16,15 @@ function getMeetEntries(meetId, coachId, done) {
       Meet.findOne({id: meetId}).exec(done);
     },
 
-    team: ['meet', function(done, results) {
+    team: function(done, results) {
       //get the current coach's team
       //TODO: add passport to auth coaches
-      Team.findOne({coach: coachId}).populate('swimmers').exec(done);
-    }],
+      Team.findOne({coach: coachId}).populate('coach').populate('swimmers').exec(done);
+    },
 
     entries: ['team', function(done, results){
       //get only the swimmer entires for this meet
-      SwimEntry.find({meet: meetId, swimmer: _.pluck(results.team.swimmers, 'id')}).exec(done);
+      SwimEntry.find({meet: meetId, swimmer: _.pluck(results.team.swimmers, 'id')}).populate('swimEvent').exec(done);
     }],
 
     swimmerEntries: ['entries', function(done, results) {

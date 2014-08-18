@@ -16,11 +16,28 @@ module.exports = {
       type: 'string',
       required: 'true'
     },
+    gender: {
+      type: 'integer',
+      required: true
+    },
+    grade: {
+      type: 'integer',
+      required: true
+    },
+    birthDate: {
+      type: 'date'
+    },
     team: {
       model: 'team'
     },
     coach: {
       model: 'coach'
+    },
+
+    toJSON: function() {
+      var obj = this.toObject();
+      obj.gender = (obj.gender === 1 ? 'M' : 'F');
+      return obj;
     }
   }
 };

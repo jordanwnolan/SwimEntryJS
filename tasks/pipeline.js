@@ -28,12 +28,16 @@ var jsFilesToInject = [
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
-  'bower_components/jquery/jquery.min.js',
+  'bower_components/jquery/dist/jquery.min.js',
   'bower_components/underscore/underscore.js',
   'bower_components/backbone/backbone.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
+  'js/models/swimmerModel.js',
+  'js/models/*.js',
+  'js/collections/*.js',
+  'js/views/*.js',
   'js/**/*.js'
 ];
 

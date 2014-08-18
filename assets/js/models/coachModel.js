@@ -1,0 +1,1 @@
+var CoachModel = Backbone.Model.extend({});

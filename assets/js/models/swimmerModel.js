@@ -1,0 +1,1 @@
+var SwimmerModel = Backbone.Model.extend({});
