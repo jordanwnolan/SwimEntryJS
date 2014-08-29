@@ -80,6 +80,21 @@ module.exports = {
     });
   },
 
+  createEntries: function(req, res) {
+    var meetId = req.params['id'];
+    var coachId = '53e3e5ce7fc5aa384bc4b6c4';
+    getMeetEntries(meetId, coachId, function(results){
+      var swimmers = results.swimmerEntries,
+          team = results.team,
+          meet = results.meet;
+
+      console.log(swimmers[0].swimEntries[0].swimEvent);
+
+      var locals = { meet: meet, team: team, swimmers: swimmers }
+      res.view('meet/createEntries', locals);
+    });
+  },
+
   meetEntries: function(req, res) {
     var meetId = req.params['id'];
     var coachId = '53e3e5ce7fc5aa384bc4b6c4';

@@ -28,7 +28,12 @@ module.exports.routes = {
   //
   // (Alternatively, remove this and add an `index.html` file in your `assets` directory)
   '/': {
-    view: 'testMainPage'
+    view: 'homepage'
+  },
+
+  'get /meet/:id/createentries': {
+    controller: 'meet',
+    action: 'createEntries'
   },
 
   '/api/coach': {
@@ -44,6 +49,11 @@ module.exports.routes = {
   'get /api/meet/:id/entries': {
     controller: 'meet',
     action: 'meetEntries'
+  },
+
+  'get /api/swimmer/:id/entries': {
+    controller: 'swimmer',
+    action: 'entries'
   }
 
 

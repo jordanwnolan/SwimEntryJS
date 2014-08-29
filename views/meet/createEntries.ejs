@@ -1,2 +1,31 @@
-<h1>Meet Show</h1>
-<strong><%= meet %></strong>
+<h1>Meet <%= meet.meetDate %></h1>
+<strong><%= team.name %></strong>
+<ul>
+  <% swimmers.forEach(function(swimmer){ %>
+
+    <li><%= swimmer.firstName %></li>
+    <h3>Entries</h3>
+    <ul>
+    <% swimmer.swimEntries.forEach(function(entry) { %>
+      <li>
+        <ul>
+          <li><%= entry.swimEvent.distance %></li>
+          <li><%= entry.swimEvent.stroke %></li>
+        </ul>
+      </li>
+    <% }); %>
+    </ul>
+
+  <% }); %>
+</ul>
+
+<script id="bootstrappedSwimmers">
+  <%- JSON.stringify(swimmers) %>
+</script>
+
+<script>
+  $(document).ready(function(){
+    var swimmersJSON = JSON.parse($("#bootstrappedSwimmers").html());
+    var swimmersCollection = new SwimmerCollection(swimmersJSON);
+  })
+</script>
